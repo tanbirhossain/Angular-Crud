@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SlimLoadingBarModule } from "ng2-slim-loading-bar";
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { EmployeeService } from "./services/employee.service";
 import { EmployeeAddComponent } from './Components/employees/employee-add/employee-add.component';
 import { EmployeeListComponent } from './Components/employees/employee-list/employee-list.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import { AppComponent } from './Shared/app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({

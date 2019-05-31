@@ -3,24 +3,33 @@ import { NgModule } from '@angular/core';
 import { SlimLoadingBarModule } from "ng2-slim-loading-bar";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeAddComponent } from './employees/employee-add/employee-add.component';
-import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { EmployeeService } from "./services/employee.service";
+import { EmployeeAddComponent } from './Components/employees/employee-add/employee-add.component';
+import { EmployeeListComponent } from './Components/employees/employee-list/employee-list.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent,
+
     EmployeeAddComponent,
     EmployeeListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AppComponent
   ],
   imports: [
-     ReactiveFormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     SlimLoadingBarModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

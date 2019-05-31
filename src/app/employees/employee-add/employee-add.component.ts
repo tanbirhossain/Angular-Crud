@@ -28,9 +28,9 @@ export class EmployeeAddComponent implements OnInit {
 
 
   ngOnInit() {
-   this.rr();
+   this.sayHello();
   }
-  rr() {
+  sayHello() {
 
     let result = "aa";
     let message = result;

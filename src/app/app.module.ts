@@ -12,6 +12,7 @@ import { EmployeeListComponent } from './Components/employees/employee-list/empl
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { AppComponent } from './Shared/app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './Components/Security/login/login.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     EmployeeAddComponent,
     EmployeeListComponent,
     PageNotFoundComponent,
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,

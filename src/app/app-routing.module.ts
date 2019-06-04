@@ -1,3 +1,4 @@
+import { LoginComponent } from './Components/Security/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
@@ -6,6 +7,10 @@ import { EmployeeListComponent } from './Components/employees/employee-list/empl
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  {
+    path: "login",
+    component: LoginComponent
+  },
     {
       path: "employee/add",
       component: EmployeeAddComponent

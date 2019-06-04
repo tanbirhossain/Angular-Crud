@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import { AppComponent } from './Shared/app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './Components/Security/login/login.component';
+import { RegistrationComponent } from './Components/Security/registration/registration.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoginComponent } from './Components/Security/login/login.component';
     EmployeeListComponent,
     PageNotFoundComponent,
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     HttpClientModule,

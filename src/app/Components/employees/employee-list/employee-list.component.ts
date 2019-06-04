@@ -48,7 +48,6 @@ export class EmployeeListComponent implements OnInit {
           .subscribe(data => {
             this.employeeList = this.employeeList.filter(u => u !== employee);
           });
-
       }
     });
 

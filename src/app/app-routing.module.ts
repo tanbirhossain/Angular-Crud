@@ -1,3 +1,4 @@
+import { AuthGuard } from './Auth/auth.guard';
 import { LoginComponent } from './Components/Security/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -13,19 +14,19 @@ const routes: Routes = [
   },
     {
       path: "employee/add",
-      component: EmployeeAddComponent
+      component: EmployeeAddComponent, canActivate:[AuthGuard]
     },
     {
       path: "employee/edit/:id",
-      component: EmployeeAddComponent
+      component: EmployeeAddComponent, canActivate:[AuthGuard]
     },
     {
       path: "employee/list",
-      component: EmployeeListComponent
+      component: EmployeeListComponent, canActivate:[AuthGuard]
     },
     {
       path: "",
-      redirectTo: "employee/add",
+      redirectTo: "employee/add", canActivate:[AuthGuard],
       pathMatch: "full"
     },
     {

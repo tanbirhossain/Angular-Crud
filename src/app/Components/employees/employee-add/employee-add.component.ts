@@ -17,9 +17,9 @@ export class EmployeeAddComponent implements OnInit {
   routeValue: number;
   buttonText = "Insert";
   constructor(private fb: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private employeeService: EmployeeService) {
+              private route: ActivatedRoute,
+              private router: Router,
+              private employeeService: EmployeeService) {
 
   }
   ngOnInit() {
@@ -55,7 +55,7 @@ export class EmployeeAddComponent implements OnInit {
 
   CreateEmployee(employee: Employee) {
     alert("cliceked!");
-    if (this.routeValue != null) {  //update
+    if (this.routeValue != null) {  // update
       this.employeeService.updateEmployee(employee).subscribe(
         (result) => {
           console.log("result:", result);
@@ -63,7 +63,7 @@ export class EmployeeAddComponent implements OnInit {
           // this.angForm.reset();
         }
       );
-    } else { //Insert
+    } else { // Insert
 
       alert("Insert");
       console.log(employee);
